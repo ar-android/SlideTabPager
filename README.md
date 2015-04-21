@@ -1,6 +1,6 @@
 #Slide Tab Pager
 
-This is xml
+# Usage
 
     <com.ocit.SlideTabPager
         android:id="@+id/tabs"
@@ -11,9 +11,21 @@ This is xml
     </com.ocit.SlideTabPager>
 
 
-This is to aplly library
+    In your `onCreate` method (or `onCreateView` for a fragment), bind the
+    widget to the `ViewPager`.
 
-SlideTabPager tabsStrip = (SlideTabPager) findViewById(R.id.tabs);
-tabsStrip.setViewPager(viewPager);
+        // Initialize the ViewPager and set an adapter
+	ViewPager viewPager = (ViewPager) findViewById(R.id.viewpager);
+	viewPager.setAdapter(new PagerAdapter(getSupportFragmentManager()));
+	
+         // Bind the tabs to the ViewPager
+	SlideTabPager tabsStrip = (SlideTabPager) findViewById(R.id.tabs);
+	tabsStrip.setViewPager(viewPager);
+
+   *(Optional)* If you use an `OnPageChangeListener` with your view pager
+   you should set it in the widget rather than on the pager directly.
+
+         // continued from above
+         tabs.setOnPageChangeListener(mPageChangeListener);
 
 
