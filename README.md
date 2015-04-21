@@ -1,7 +1,7 @@
 #Slide Tab Pager
 
 # Usage
-
+```
     <com.ocit.SlideTabPager
         android:id="@+id/tabs"
         android:layout_width="match_parent"
@@ -9,10 +9,10 @@
         app:pstsShouldExpand="true"
         app:pstsTextAllCaps="true" >
     </com.ocit.SlideTabPager>
+```
 
-
-    In your `onCreate` method (or `onCreateView` for a fragment), bind the
-    widget to the `ViewPager`.
+  In your `onCreate` method (or `onCreateView` for a fragment), bind the
+  widget to the `ViewPager`.
 
         // Initialize the ViewPager and set an adapter
 	ViewPager viewPager = (ViewPager) findViewById(R.id.viewpager);
@@ -22,8 +22,8 @@
 	SlideTabPager tabsStrip = (SlideTabPager) findViewById(R.id.tabs);
 	tabsStrip.setViewPager(viewPager);
 
-   *(Optional)* If you use an `OnPageChangeListener` with your view pager
-   you should set it in the widget rather than on the pager directly.
+  *(Optional)* If you use an `OnPageChangeListener` with your view pager
+  you should set it in the widget rather than on the pager directly.
 
          // continued from above
          tabs.setOnPageChangeListener(mPageChangeListener);
