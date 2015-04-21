@@ -1,6 +1,7 @@
 #Slide Tab Pager
 
 # Usage
+In your layout xml add this code to make sliding tabs
 ```
     <com.ocit.SlideTabPager
         android:id="@+id/tabs"
